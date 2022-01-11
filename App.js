@@ -12,6 +12,8 @@ import _ from 'lodash';
 const UselessTextInput = () => {
   const [text, onChangeText] = React.useState('');
   const [processedData, setProcessedData] = React.useState([]);
+
+  //data dummy
   const DATA = [
     {
       title: 'Delhi',
@@ -71,6 +73,7 @@ const UselessTextInput = () => {
     },
   ];
 
+  //search handle
   const handleChange = text => {
     onChangeText(text);
     const length = text.length;
@@ -80,6 +83,7 @@ const UselessTextInput = () => {
     setProcessedData(filteredData);
   };
 
+  //item component
   const Item = ({title}) => (
     <View style={styles.item}>
       <Text style={styles.title}>{title}</Text>
